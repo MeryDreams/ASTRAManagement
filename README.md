@@ -24,7 +24,7 @@ Aplicación PMDM
 |---|---|
 | **Proyecto** | 1.ª evaluación de PMDM |
 | **Curso académico** | 2026-27 |
-| **Autora** | María Alonso |
+| **Autora** | María Alonso Pérez |
 | **GitHub** | [@MeryDreams](https://github.com/MeryDreams) |
 | **Versión** | 1.0 |
 | **Fecha** | 20 de noviembre de 2026 |
