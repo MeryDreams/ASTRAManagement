@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/astra_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <TextView
+            android:id="@+id/tvAltaTitulo"
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo Artista"
+            android:textColor="@color/astra_white"
+            android:textSize="29sp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NOMBRE ARTÍSTICO" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            style="@style/AstraField"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:hint="Escribe aquí"
+            android:inputType="text" />
+
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TIPO" />
+
+        <Spinner
+            android:id="@+id/spTipo"
+            style="@style/AstraSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GÉNERO MUSICAL" />
+
+        <EditText
+            android:id="@+id/etGenero"
+            style="@style/AstraField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="K-pop, RandB, Rock..."
+            android:inputType="text" />
+
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NÚMERO DE MIEMBROS" />
+
+        <EditText
+            android:id="@+id/etMiembros"
+            style="@style/AstraField"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Número"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AÑO DE DEBUT" />
+
+        <EditText
+            android:id="@+id/etFecha"
+            style="@style/AstraField"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:hint="Año de debut"
+            android:inputType="number" />
+
+        <!-- SEEK BAR -->
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="POPULARIDAD (1-10)" />
+
+        <TextView
+            android:id="@+id/tvPopularidad"
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Popularidad: 5/10" />
+
+        <SeekBar
+            android:id="@+id/seekBarPopularidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="9"
+            android:progress="4" />
+
+        <!-- RADIO BUTTON -->
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ESTADO" />
+
+        <RadioGroup
+            android:id="@+id/rgEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbActivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activo"
+                android:textColor="@color/astra_white" />
+
+            <RadioButton
+                android:id="@+id/rbHiatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hiatus"
+                android:textColor="@color/astra_white" />
+
+            <RadioButton
+                android:id="@+id/rbComeback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="En comeback"
+                android:textColor="@color/astra_white" />
+
+        </RadioGroup>
+
+        <!-- SWITCH -->
+        <Switch
+            android:id="@+id/swActivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="¿El artista está activo?"
+            android:textColor="@color/astra_white" />
+
+        <!-- RATING BAR -->
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VALORACIÓN" />
+
+        <RatingBar
+            android:id="@+id/rbValoracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5" />
+
+        <!-- PROGRESS BAR -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <!-- BOTONES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnReset"
+                style="@style/AstraButton"
+                android:layout_width="0dp"
+                android:layout_height="53dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="RESET" />
+
+            <Button
+                android:id="@+id/btnEnviar"
+                style="@style/AstraButton"
+                android:layout_width="0dp"
+                android:layout_height="59dp"
+                android:layout_weight="1"
+                android:text="GUARDAR" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

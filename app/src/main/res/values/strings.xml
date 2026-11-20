@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ASTRA Management</string>
+
+    <!-->String de la clase AltaArtista<-->
+    <string-array name="Grupos">
+        <item>Solista</item>
+        <item>Boy Group</item>
+        <item>Girl Group</item>
+        <item>Banda</item>
+    </string-array>
+
+    <!-->String de la clase BuscarArtista<-->
+    <string-array name="Sedes">
+        <item>Seúl</item>
+        <item>Nueva York</item>
+        <item>Londres</item>
+        <item>Tokio</item>
+        <item>Madrid</item>
+    </string-array>
+</resources>

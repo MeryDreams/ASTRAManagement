@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/astra_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <TextView
+            android:id="@+id/tvAltaTitulo"
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo Evento"
+            android:textColor="@color/astra_white"
+            android:textSize="29sp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NOMBRE DEL EVENTO" />
+
+        <EditText
+            android:id="@+id/etNombreEvento"
+            style="@style/AstraField"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:hint="Nombre del evento"
+            android:inputType="text" />
+
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ARTISTA" />
+
+        <Spinner
+            android:id="@+id/spArtista"
+            style="@style/AstraSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FECHA DEL EVENTO" />
+
+        <DatePicker
+            android:id="@+id/dpFechaEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="calendar" />
+
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HORA DEL EVENTO" />
+
+        <TimePicker
+            android:id="@+id/tpHoraEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner" />
+
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LUGAR" />
+
+        <EditText
+            android:id="@+id/etLugarEvento"
+            style="@style/AstraField"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:hint="Lugar del evento"
+            android:inputType="text" />
+
+        <TextView
+            style="@style/AstraLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPCIÓN" />
+
+        <EditText
+            android:id="@+id/etDescripcionEvento"
+            style="@style/AstraField"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="top"
+            android:hint="Descripción del evento"
+            android:inputType="textMultiLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnReset"
+                style="@style/AstraButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="RESET" />
+
+            <Button
+                android:id="@+id/btnEnviar"
+                style="@style/AstraButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GUARDAR" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/astra_surface" />
+
+    <corners android:radius="20dp" />
+
+</shape>
+
+<!--
+<selector> sirve para definir diferentes estados de un elemento.
+<shape> sirve para crear formas, como rectángulos con esquinas redondeadas.
+-->

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/astra_black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:gravity="center_vertical">
+
+        <!-- Cabezera -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+
+            <LinearLayout
+                android:layout_width="273dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:text="ASTRA"
+                    android:textColor="@color/astra_white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="171dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:text="E N T E R T A I N M E N T"
+                    android:textColor="@color/astra_purple" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSalir"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/astra_purple"
+                android:text="SALIR" />
+        </LinearLayout>
+
+        <!-- Bienvenida -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/tvPanelControl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Panel de control"
+                android:textColor="@color/astra_purple"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvBienvenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido nombredelusuario"
+                android:textColor="@color/astra_white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvSubtitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gestiona tu talento desde un solo lugar"
+                android:textColor="@color/astra_gray"/>
+        </LinearLayout>
+
+        <!--
+        wrap_content: permite que la tarjeta se adapte al contenido.
+
+        layout_margin: separa la tarjeta de otros elementos.
+
+        padding: deja espacio entre el contenido y los bordes redondeados.
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="153dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/bg_tarjeta"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tvGestionArtistas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GESTION DE ARTISTAS"
+                android:textColor="@color/astra_light_purple"
+                android:textStyle="bold" />
+
+            <!-- Alta Artista -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNuevoArtista"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nuevo talento"
+                    android:textColor="@color/astra_purple"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAgregarArtistaDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Administrar los perfiles y la información de tus artistas"
+                    android:textColor="@color/astra_gray" />
+
+                <Button
+                    android:id="@+id/btnVerArtistas"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:backgroundTint="@color/astra_purple"
+                    android:text="Ver Artistas"
+                    android:textColor="@color/astra_black" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- Menu de Layaouts -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Primera Fila Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:orientation="horizontal">
+
+                <!-- Primer Layout Alta -->
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="86dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/bg_tarjeta"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:id="@+id/cardAltas">
+
+                    <TextView
+                        android:id="@+id/tvAltas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Altas"
+                        android:textColor="@color/astra_light_purple"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvRegistrarDescripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Registrar artistas"
+                        android:textColor="@color/astra_purple"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    android:layout_margin="12dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_tarjeta"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:id="@+id/cardBuscar">
+
+                    <TextView
+                        android:id="@+id/tvBuscarArtista"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Buscar"
+                        android:textColor="@color/astra_light_purple"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvFiltarDescripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Filtrar artista"
+                        android:textColor="@color/astra_purple"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="182dp"
+                    android:layout_height="79dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/bg_tarjeta"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:id="@+id/cardEventos">
+
+                    <TextView
+                        android:id="@+id/tvEventos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Eventos"
+                        android:textColor="@color/astra_light_purple"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvEventosDescripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Organizar actividades"
+                        android:textColor="@color/astra_purple"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="79dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/bg_tarjeta"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:id="@+id/cardAsistencia">
+
+                    <TextView
+                        android:id="@+id/tvConfirmarAsistencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Confirmar asistencia"
+                        android:textColor="@color/astra_light_purple"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAdministracionDescripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Asistencia"
+                        android:textColor="@color/astra_purple"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvArrastrar"
+                    android:layout_width="67dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/astra_purple"
+                    android:gravity="center"
+                    android:text="Arrastra"
+                    android:textColor="@color/astra_black" />
+
+                <TextView
+                    android:id="@+id/tvSoltar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@color/astra_dark_gray"
+                    android:gravity="center"
+                    android:text="Soltar aqui"
+                    android:textColor="@color/astra_white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
