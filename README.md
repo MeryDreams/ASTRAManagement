@@ -1,212 +1,224 @@
 # ASTRAManagement
 Aplicación PMDM
 
-<div align="center">
+# ✨ ASTRA Management
 
-# 🎬 ASTRAManagement
+<p align="center">
+  <strong>Aplicación Android nativa para la gestión interna de una agencia de entretenimiento.</strong>
+  <br>
+  Gestión de artistas, eventos y asistencia del personal desde una única aplicación.
+</p>
 
-**Aplicación PMDM · Gestión de artistas y eventos de una agencia de entretenimiento**
-
-![PMDM](https://img.shields.io/badge/PMDM-2026%2F27-7B1FA2)
-![Java](https://img.shields.io/badge/Java-11-007396)
-![Android](https://img.shields.io/badge/Android-API%2037-3DDC84)
-![Gradle](https://img.shields.io/badge/Gradle-9.6-02303A)
-![Room](https://img.shields.io/badge/Room-2.6.1-4285F4)
-![Estado](https://img.shields.io/badge/Estado-Entregado-2E7D32)
-
-| 👤 Autor | 🔗 Repositorio | 📌 Versión |
-| :---: | :---: | :---: |
-| María Alonso (`MeryDreams`) | [MeryDreams/ASTRAManagement](https://github.com/MeryDreams/ASTRAManagement) | 1.0 · 20/11/2026 |
-
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/Plataforma-Android-3DDC84?logo=android&logoColor=white" alt="Android">
+  <img src="https://img.shields.io/badge/Lenguaje-Java-orange?logo=openjdk&logoColor=white" alt="Java">
+  <img src="https://img.shields.io/badge/Versión-1.0-8A2BE2" alt="Versión 1.0">
+  <img src="https://img.shields.io/badge/Curso-2026--27-blue" alt="Curso 2026-27">
+</p>
 
 ---
 
-## 📑 Índice
+## 📌 Información del proyecto
 
-- [🚀 Funcionalidades](#funcionalidades)
-- [🛠️ Tecnologías](#tecnologias)
-- [📋 Requisitos](#requisitos)
-- [⚙️ Compilación e instalación](#compilacion)
-- [🔑 Credenciales de prueba](#credenciales)
-- [📁 Estructura del proyecto](#estructura)
-- [🗄️ Base de datos](#base-de-datos)
-- [📚 Documentación](#documentacion)
-- [⚠️ Limitaciones y trabajo futuro](#limitaciones)
-- [🤖 Herramientas de IA](#ia)
-- [🧹 Antes de subir a GitHub](#github)
+| | |
+|---|---|
+| **Proyecto** | 1.ª evaluación de PMDM |
+| **Curso académico** | 2026-27 |
+| **Autora** | María Alonso |
+| **GitHub** | [@MeryDreams](https://github.com/MeryDreams) |
+| **Versión** | 1.0 |
+| **Fecha** | 20 de noviembre de 2026 |
+| **Repositorio** | [ASTRAManagement](https://github.com/MeryDreams/ASTRAManagement) |
 
----
+## 🎯 Descripción
 
-<a id="funcionalidades"></a>
+**ASTRA Management** es una aplicación Android nativa desarrollada en Java para facilitar la gestión interna de una agencia de entretenimiento.
 
-## 🚀 Funcionalidades
+La aplicación permite administrar un catálogo de artistas, consultar y modificar sus fichas, organizar eventos asociados a cada artista y gestionar la asistencia del personal a un showcase.
 
-Proyecto de la **1.ª evaluación de Programación de Dispositivos Móviles** (curso 2026-27). La app permite:
+Su diseño está pensado para centralizar las principales tareas de administración en una interfaz sencilla e intuitiva, utilizando almacenamiento local mediante SQLite y Room.
 
-- 🔐 **Acceso** con usuarios reales guardados en SQLite, consultados en segundo plano.
-- 🏠 **Panel de control** con tarjetas de artistas, altas, búsqueda, eventos y asistencia, más un gesto de arrastrar y soltar para «Acerca de».
-- 🎤 **Catálogo de artistas** con `RecyclerView` + `CardView`: clic corto para la ficha, clic largo para borrar con confirmación.
-- 📝 **Alta y edición** con `Spinner`, `RadioButton`, `Switch`, `RatingBar`, `SeekBar` y `ProgressBar`.
-- 🔎 **Búsqueda** por tipo, artista y sede.
-- 📅 **Eventos** con `DatePicker`, `TimePicker` y borrado en cascada al eliminar al artista.
-- ✅ **Asistencia** del personal mediante la Activity Result API.
-- 💾 **Persistencia local** con SQLite clásico y Room, sin servidor ni conexión a internet.
+## 🚀 Funcionalidades principales
 
-> [!NOTE]
-> Toda la información se guarda únicamente en el dispositivo: no hay servidor ni sincronización en la nube.
+### 🔐 Autenticación
+- Inicio de sesión mediante usuarios almacenados en SQLite.
+- Validación de credenciales.
+- Consultas a la base de datos en segundo plano.
 
----
+### 🏠 Panel de control
+- Acceso mediante tarjetas a las diferentes secciones de la aplicación.
+- Navegación hacia artistas, altas, búsquedas, eventos y asistencia.
+- Gesto de arrastrar y soltar (*Drag & Drop*) para acceder a la sección «Acerca de».
 
-<a id="tecnologias"></a>
+### 🎤 Gestión de artistas
+- Visualización del catálogo mediante `RecyclerView` y `CardView`.
+- Consulta de fichas individuales.
+- Eliminación de artistas mediante pulsación larga y diálogo de confirmación.
+- Alta y edición de artistas.
+- Selección del tipo de artista y su estado.
+- Valoración mediante `RatingBar` y popularidad mediante `SeekBar`.
 
-## 🛠️ Tecnologías
+### 🔎 Búsqueda de artistas
+- Búsqueda por tipo de artista.
+- Búsqueda por nombre.
+- Búsqueda por sede.
 
-| Elemento | Versión |
-| :--- | :--- |
-| ☕ Lenguaje | Java 11 |
-| 🐘 Gradle / AGP | 9.6.0 / 9.5.1 |
-| 🤖 SDK (compile / target / min) | 37 / 37 / 37 |
-| 🗄️ Room | 2.6.1 |
-| 📃 RecyclerView | 1.4.0 |
-| 💳 CardView | 1.0.0 |
-| 📐 ConstraintLayout | 2.1.4 |
-| 🧩 AppCompat / Material / Activity KTX | 1.8.0 / 1.14.0 / 1.13.0 |
+### 📅 Gestión de eventos
+- Creación y edición de eventos.
+- Selección de fecha mediante `DatePicker`.
+- Selección de hora mediante `TimePicker`.
+- Asociación de cada evento con un artista.
+- Relación uno a muchos (1:N) entre artistas y eventos.
+- Eliminación en cascada para mantener la integridad de los datos.
 
----
+### 👥 Control de asistencia
+- Registro del nombre del personal.
+- Confirmación o cancelación de asistencia al showcase.
+- Comunicación entre actividades mediante la Activity Result API.
 
-<a id="requisitos"></a>
+### 💾 Persistencia de datos
+- SQLite clásico para usuarios y datos de acceso.
+- Room para la gestión de artistas y eventos.
+- Operaciones de base de datos ejecutadas en segundo plano.
+- Funcionamiento completamente local, sin necesidad de servidor ni conexión a internet.
 
-## 📋 Requisitos
+## 🛠️ Tecnologías utilizadas
 
-- 🧰 Android Studio compatible con AGP 9.5.1.
-- ☕ JDK 21 para ejecutar Gradle 9.6.0.
-- 📱 SDK de Android 37 instalado.
-- 📲 Emulador o dispositivo con **API 37 o superior**.
+| Tecnología | Versión |
+|---|---|
+| Lenguaje de programación | Java 11 |
+| Android Gradle Plugin | 9.5.1 |
+| Gradle Wrapper | 9.6.0 |
+| `compileSdk` | 37 |
+| `targetSdk` | 37 |
+| `minSdk` | 37 |
+| Room | 2.6.1 |
+| RecyclerView | 1.4.0 |
+| CardView | 1.0.0 |
+| ConstraintLayout | 2.1.4 (alias 2.2.2) |
+| AppCompat | 1.8.0 |
+| Material Components | 1.14.0 |
+| Activity KTX | 1.13.0 |
 
-> [!TIP]
-> Si quieres probar en más dispositivos, baja `minSdk` de 37 a 24 o 26 en `app/build.gradle.kts`.
+## 📋 Requisitos del sistema
 
----
+Para abrir y ejecutar el proyecto se necesita:
 
-<a id="compilacion"></a>
+- **Android Studio:** compatible con Android Gradle Plugin 9.5.1 (Ladybug o superior).
+- **JDK:** versión 21 para ejecutar Gradle 9.6.0.
+- **Java:** el código fuente se compila con Java 11.
+- **Android SDK:** API 37 instalada.
+- **Dispositivo o emulador:** Android API 37 o superior.
 
-## ⚙️ Compilación e instalación
+> ⚠️ **Importante:** Actualmente, `minSdk = 37`, por lo que la aplicación solo puede instalarse en dispositivos compatibles con API 37 o superior. Para ampliar la compatibilidad con otros dispositivos Android, sería necesario reducir este valor y comprobar la compatibilidad de las dependencias utilizadas.
+
+## ⚙️ Instalación y compilación
+
+### 1. Clonar el repositorio
 
 ```bash
 git clone https://github.com/MeryDreams/ASTRAManagement.git
-cd ASTRAManagement
+```
 
-./gradlew assembleDebug          # Windows: gradlew.bat assembleDebug
+### 2. Acceder al directorio del proyecto
+
+```bash
+cd ASTRAManagement
+```
+
+### 3. Compilar la aplicación
+
+**Linux / macOS:**
+
+```bash
+./gradlew assembleDebug
+```
+
+**Windows:**
+
+```bash
+gradlew.bat assembleDebug
+```
+
+### 4. Instalar en un dispositivo o emulador
+
+Con un dispositivo Android conectado o un emulador iniciado:
+
+```bash
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
-💡 También puedes abrir la carpeta en Android Studio y ejecutar la configuración **app**. El APK se genera en `app/build/outputs/apk/debug/app-debug.apk`.
-
----
-
-<a id="credenciales"></a>
-
-## 🔑 Credenciales de prueba
-
-Los usuarios se crean automáticamente la primera vez que se instala la aplicación.
-
-| Correo | Contraseña | Nombre |
-| :--- | :--- | :--- |
-| `maria@astra.com` | `1234` | María |
-| `carlos@astra.com` | `1234` | Carlos |
-| `laura@astra.com` | `1234` | Laura |
-
----
-
-<a id="estructura"></a>
-
-## 📁 Estructura del proyecto
+El archivo APK generado se encontrará en:
 
 ```text
-app/src/main/java/com/example/astramanagement/
-├── login/        LoginActivity
-├── bd/           AppDatabase (SQLiteOpenHelper)
-├── dao/          UsuarioDAO, ArtistaDAO, EventoDAO
-├── modelo/       Usuario
-├── room/         Artista, Evento, ArtistaConEventos,
-│                 ArtistaDatabase, DatabaseClient
-├── adapters/     ArtistaAdapter, EventoAdapter
-└── activities/   MainActivity, ArtistasActivity, AltaArtistaActivity,
-                  FichaArtistaActivity, BuscarArtista, EventosActivity,
-                  AltaEventoActivity, AsistenciaActivity,
-                  ConfirmarAsistenciaActivity, AcercaDeActivity
+app/build/outputs/apk/debug/app-debug.apk
+```
 
-docs/             Manual de usuario y manual técnico (PDF)
+## 🗂️ Estructura general del proyecto
+
+```text
+## 🗂️ Estructura general del proyecto
+
+ASTRAManagement/
+│
+├── app/
+│   └── src/
+│       └── main/
+│           ├── java/com/example/astramanagement/
+│           │
+│           │   ├── login/
+│           │   │   └── LoginActivity.java
+│           │   │
+│           │   ├── bd/
+│           │   │   └── AppDatabase.java
+│           │   │       (SQLiteOpenHelper)
+│           │   │
+│           │   ├── dao/
+│           │   │   ├── UsuarioDAO.java
+│           │   │   ├── ArtistaDAO.java
+│           │   │   └── EventoDAO.java
+│           │   │
+│           │   ├── modelo/
+│           │   │   └── Usuario.java
+│           │   │
+│           │   ├── room/
+│           │   │   ├── Artista.java
+│           │   │   ├── Evento.java
+│           │   │   ├── ArtistaConEventos.java
+│           │   │   ├── ArtistaDatabase.java
+│           │   │   └── DatabaseClient.java
+│           │   │
+│           │   ├── adapters/
+│           │   │   ├── ArtistaAdapter.java
+│           │   │   └── EventoAdapter.java
+│           │   │
+│           │   └── activities/
+│           │       ├── MainActivity.java
+│           │       ├── ArtistasActivity.java
+│           │       ├── AltaArtistaActivity.java
+│           │       ├── FichaArtistaActivity.java
+│           │       ├── BuscarArtista.java
+│           │       ├
 ```
 
 ---
 
-<a id="base-de-datos"></a>
+## 👩‍💻 Autora
 
-## 🗄️ Base de datos
+**María Alonso — MeryDreams**
 
-- 🧾 **SQLite** (`artistas.db`): tablas `usuarios` y `lista_personal`, relacionadas por `usuario_id` con borrado en cascada.
-- 🧩 **Room** (`artistas_room.db`): entidades `Artista` y `Evento`, con clave foránea `Evento.artistaId → Artista.id` y consulta `@Relation` de artistas con sus eventos.
-- 🧵 Las consultas se ejecutan en un `ExecutorService` y la interfaz se actualiza con `runOnUiThread`.
+Proyecto desarrollado como parte de la primera evaluación del módulo de Programación Multimedia y Dispositivos Móviles (PMDM), correspondiente al curso 2026-2027.
 
----
-
-<a id="documentacion"></a>
-
-## 📚 Documentación
-
-| Manual | Enlace |
-| :--- | :--- |
-| 📖 Manual de usuario | [Ver PDF](docs/Manual_de_usuario_ASTRA_Management.pdf) |
-| 🔧 Manual técnico | [Ver PDF](docs/Manual_tecnico_ASTRA_Management.pdf) |
-
-Ambos en **A4, Calibri 11**, con portada, índice, introducción, bibliografía/webgrafía, nota sobre herramientas de IA y la URL de este repositorio.
+<p align="center">
+  <a href="https://github.com/MeryDreams/ASTRAManagement">
+    <strong>🌌 Visita el repositorio de ASTRA Management en GitHub</strong>
+  </a>
+</p>
 
 ---
 
-<a id="limitaciones"></a>
-
-## ⚠️ Limitaciones y trabajo futuro
-
-> [!WARNING]
-> Puntos pendientes que conviene conocer antes de la defensa.
-
-- El segundo `Spinner` de `BuscarArtista` no se rellena: una variable local `nombres` oculta al campo de clase.
-- La tabla `lista_personal` existe, pero todavía no se usa desde la interfaz.
-- No hay menú lateral, menú de opciones ni menú contextual.
-- Falta `res/values-en/strings.xml`: la aplicación está solo en español.
-- Algunos layouts usan tamaños fijos en dp y pueden recortarse en horizontal.
-- `minSdk = 37` limita los dispositivos compatibles.
-
----
-
-<a id="ia"></a>
-
-## 🤖 Herramientas de IA
-
-> [!NOTE]
-> Se ha usado el agente **OpenCode** (modelo **Big Pickle**) como apoyo para revisar el código, comprobar la compilación y redactar la documentación. El código y las decisiones de diseño son del estudiante, que puede explicarlos y modificarlos en la defensa. No se han empleado otros servicios de generación de código.
-
----
-
-<a id="github"></a>
-
-## 🧹 Antes de subir a GitHub
-
-> [!IMPORTANT]
-> No versiones `local.properties`, `.gradle/`, `build/`, `app/build/` ni `.idea/`. El `.gitignore` actual no ignora `app/build/` completo, así que añade esto:
-
-```gitignore
-/app/build
-/.idea
-```
-
----
-
-<div align="center">
-
-**Hecho con 💜 para PMDM · 2026/27**  
-[🔗 Ver repositorio en GitHub](https://github.com/MeryDreams/ASTRAManagement)
-
-</div>
+<p align="center">
+  <strong>ASTRA Management · Versión 1.0</strong>
+  <br>
+  <em>Organización, gestión y entretenimiento.</em>
+</p>
